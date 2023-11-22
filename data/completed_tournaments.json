@@ -1,0 +1,1110 @@
+[
+    {
+        "name": "World cup",
+        "location": "las vegas",
+        "date": "16/11/2023",
+        "description": "description",
+        "number_of_rounds": 4,
+        "players": [
+            {
+                "first_name": "Sophia",
+                "last_name": "Wilson",
+                "date_of_birth": "10/12/1988",
+                "national_chess_id": "SW12345",
+                "score": 4
+            },
+            {
+                "first_name": "Virginia",
+                "last_name": "Klein",
+                "date_of_birth": "12/02/1979",
+                "national_chess_id": "VK12345",
+                "score": 3
+            },
+            {
+                "first_name": "Lucas",
+                "last_name": "Miller",
+                "date_of_birth": "19/09/1992",
+                "national_chess_id": "LM12345",
+                "score": 3
+            },
+            {
+                "first_name": "Alexander",
+                "last_name": "Garcia",
+                "date_of_birth": "14/08/1993",
+                "national_chess_id": "AG12345",
+                "score": 3
+            },
+            {
+                "first_name": "Tim",
+                "last_name": "VanYperen",
+                "date_of_birth": "16/10/1993",
+                "national_chess_id": "TV12345",
+                "score": 3
+            },
+            {
+                "first_name": "Mischa",
+                "last_name": "Lasschuit",
+                "date_of_birth": "31/05/1995",
+                "national_chess_id": "ML12345",
+                "score": 2
+            },
+            {
+                "first_name": "Liam",
+                "last_name": "Lopez",
+                "date_of_birth": "12/02/1996",
+                "national_chess_id": "LL12345",
+                "score": 2
+            },
+            {
+                "first_name": "Michel",
+                "last_name": "Brouillard",
+                "date_of_birth": "01/08/1956",
+                "national_chess_id": "MB12345",
+                "score": 2
+            },
+            {
+                "first_name": "Jules",
+                "last_name": "Klein",
+                "date_of_birth": "29/03/2014",
+                "national_chess_id": "JK12345",
+                "score": 2
+            },
+            {
+                "first_name": "Emma",
+                "last_name": "Martinez",
+                "date_of_birth": "08/11/1994",
+                "national_chess_id": "EM12345",
+                "score": 2
+            },
+            {
+                "first_name": "Samuel",
+                "last_name": "Mouafo",
+                "date_of_birth": "01/01/1980",
+                "national_chess_id": "SM12345",
+                "score": 2
+            },
+            {
+                "first_name": "Antony",
+                "last_name": "Klein",
+                "date_of_birth": "24/10/1987",
+                "national_chess_id": "AK12345",
+                "score": 1
+            },
+            {
+                "first_name": "Justin",
+                "last_name": "Klein",
+                "date_of_birth": "27/08/2008",
+                "national_chess_id": "KJ12345",
+                "score": 1
+            },
+            {
+                "first_name": "Isaac",
+                "last_name": "Brown",
+                "date_of_birth": "05/06/1991",
+                "national_chess_id": "IB12345",
+                "score": 1
+            },
+            {
+                "first_name": "Elena",
+                "last_name": "Johnson",
+                "date_of_birth": "02/04/1985",
+                "national_chess_id": "EJ12345",
+                "score": 1
+            },
+            {
+                "first_name": "Oliver",
+                "last_name": "Smith",
+                "date_of_birth": "12/06/1995",
+                "national_chess_id": "OS12345",
+                "score": 0
+            }
+        ],
+        "Round_1": {
+            "matches": [
+                {
+                    "player1": {
+                        "name": "Sophia",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Tim",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Alexander",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Samuel",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Lucas",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Emma",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Jules",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Elena",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Virginia",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Michel",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Liam",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Isaac",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Mischa",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Justin",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Antony",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Oliver",
+                        "score": 0
+                    },
+                    "result": "1"
+                }
+            ]
+        },
+        "Round_2": {
+            "matches": [
+                {
+                    "player1": {
+                        "name": "Sophia",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Alexander",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Lucas",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Jules",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Virginia",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Liam",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Mischa",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Antony",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Tim",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Samuel",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Emma",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Elena",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Michel",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Isaac",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Justin",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Oliver",
+                        "score": 0
+                    },
+                    "result": "1"
+                }
+            ]
+        },
+        "Round_3": {
+            "matches": [
+                {
+                    "player1": {
+                        "name": "Sophia",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Lucas",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Virginia",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Mischa",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Alexander",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Jules",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Liam",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Antony",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Tim",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Emma",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Michel",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Justin",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Samuel",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Elena",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Isaac",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Oliver",
+                        "score": 0
+                    },
+                    "result": "1"
+                }
+            ]
+        },
+        "Round_4": {
+            "matches": [
+                {
+                    "player1": {
+                        "name": "Sophia",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Virginia",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Lucas",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Mischa",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Alexander",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Liam",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Tim",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Michel",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Jules",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Antony",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Emma",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Justin",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Samuel",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Isaac",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Elena",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Oliver",
+                        "score": 0
+                    },
+                    "result": "1"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Summer Vibes",
+        "location": "Saint Raphael",
+        "date": "08/11/2023",
+        "description": "summer tournament",
+        "number_of_rounds": 4,
+        "players": [
+            {
+                "first_name": "Jules",
+                "last_name": "Klein",
+                "date_of_birth": "29/03/2014",
+                "national_chess_id": "JK12345",
+                "score": 3.5
+            },
+            {
+                "first_name": "Michel",
+                "last_name": "Brouillard",
+                "date_of_birth": "01/08/1956",
+                "national_chess_id": "MB12345",
+                "score": 3.0
+            },
+            {
+                "first_name": "Justin",
+                "last_name": "Klein",
+                "date_of_birth": "27/08/2008",
+                "national_chess_id": "KJ12345",
+                "score": 2.5
+            },
+            {
+                "first_name": "Virginia",
+                "last_name": "Klein",
+                "date_of_birth": "12/02/1979",
+                "national_chess_id": "VK12345",
+                "score": 2
+            },
+            {
+                "first_name": "Antony",
+                "last_name": "Klein",
+                "date_of_birth": "24/10/1987",
+                "national_chess_id": "AK12345",
+                "score": 2
+            },
+            {
+                "first_name": "Mischa",
+                "last_name": "Lasschuit",
+                "date_of_birth": "31/05/1995",
+                "national_chess_id": "ML12345",
+                "score": 1
+            },
+            {
+                "first_name": "Tim",
+                "last_name": "VanYperen",
+                "date_of_birth": "16/10/1993",
+                "national_chess_id": "TV12345",
+                "score": 0.5
+            },
+            {
+                "first_name": "Samuel",
+                "last_name": "Mouafo",
+                "date_of_birth": "01/01/1980",
+                "national_chess_id": "SM12345",
+                "score": 0.5
+            }
+        ],
+        "Round_1": {
+            "matches": [
+                {
+                    "player1": {
+                        "name": "Jules",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Tim",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Virginia",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Mischa",
+                        "score": 0
+                    },
+                    "result": "2"
+                },
+                {
+                    "player1": {
+                        "name": "Michel",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Justin",
+                        "score": 0
+                    },
+                    "result": "0"
+                },
+                {
+                    "player1": {
+                        "name": "Antony",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Samuel",
+                        "score": 0
+                    },
+                    "result": "1"
+                }
+            ]
+        },
+        "Round_2": {
+            "matches": [
+                {
+                    "player1": {
+                        "name": "Jules",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Mischa",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Antony",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Michel",
+                        "score": 0
+                    },
+                    "result": "2"
+                },
+                {
+                    "player1": {
+                        "name": "Justin",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Tim",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Virginia",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Samuel",
+                        "score": 0
+                    },
+                    "result": "1"
+                }
+            ]
+        },
+        "Round_3": {
+            "matches": [
+                {
+                    "player1": {
+                        "name": "Jules",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Michel",
+                        "score": 0
+                    },
+                    "result": "0"
+                },
+                {
+                    "player1": {
+                        "name": "Justin",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Mischa",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Antony",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Virginia",
+                        "score": 0
+                    },
+                    "result": "2"
+                },
+                {
+                    "player1": {
+                        "name": "Tim",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Samuel",
+                        "score": 0
+                    },
+                    "result": "0"
+                }
+            ]
+        },
+        "Round_4": {
+            "matches": [
+                {
+                    "player1": {
+                        "name": "Jules",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Justin",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Michel",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Virginia",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Mischa",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Antony",
+                        "score": 0
+                    },
+                    "result": "2"
+                }
+            ]
+        }
+    },
+    {
+        "name": "National cup",
+        "location": "Paris",
+        "date": "25/12/2023",
+        "description": "national cup chess tournament in paris",
+        "number_of_rounds": 4,
+        "players": [
+            {
+                "first_name": "Lucas",
+                "last_name": "Miller",
+                "date_of_birth": "19/09/1992",
+                "national_chess_id": "LM12345",
+                "score": 4
+            },
+            {
+                "first_name": "Oliver",
+                "last_name": "Smith",
+                "date_of_birth": "12/06/1995",
+                "national_chess_id": "OS12345",
+                "score": 3
+            },
+            {
+                "first_name": "Elena",
+                "last_name": "Johnson",
+                "date_of_birth": "02/04/1985",
+                "national_chess_id": "EJ12345",
+                "score": 3
+            },
+            {
+                "first_name": "Michel",
+                "last_name": "Brouillard",
+                "date_of_birth": "01/08/1956",
+                "national_chess_id": "MB12345",
+                "score": 3
+            },
+            {
+                "first_name": "Sophia",
+                "last_name": "Wilson",
+                "date_of_birth": "10/12/1988",
+                "national_chess_id": "SW12345",
+                "score": 2
+            },
+            {
+                "first_name": "Virginia",
+                "last_name": "Klein",
+                "date_of_birth": "12/02/1979",
+                "national_chess_id": "VK12345",
+                "score": 2
+            },
+            {
+                "first_name": "Samuel",
+                "last_name": "Mouafo",
+                "date_of_birth": "01/01/1980",
+                "national_chess_id": "SM12345",
+                "score": 2
+            },
+            {
+                "first_name": "Tim",
+                "last_name": "VanYperen",
+                "date_of_birth": "16/10/1993",
+                "national_chess_id": "TV12345",
+                "score": 2
+            },
+            {
+                "first_name": "Antony",
+                "last_name": "Klein",
+                "date_of_birth": "24/10/1987",
+                "national_chess_id": "AK12345",
+                "score": 1
+            },
+            {
+                "first_name": "Mischa",
+                "last_name": "Lasschuit",
+                "date_of_birth": "31/05/1995",
+                "national_chess_id": "ML12345",
+                "score": 1
+            },
+            {
+                "first_name": "Jules",
+                "last_name": "Klein",
+                "date_of_birth": "29/03/2014",
+                "national_chess_id": "JK12345",
+                "score": 1
+            },
+            {
+                "first_name": "Justin",
+                "last_name": "Klein",
+                "date_of_birth": "27/08/2008",
+                "national_chess_id": "KJ12345",
+                "score": 0
+            }
+        ],
+        "Round_1": {
+            "matches": [
+                {
+                    "player1": {
+                        "name": "Lucas",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Michel",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Samuel",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Jules",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Sophia",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Mischa",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Elena",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Tim",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Oliver",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Virginia",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Antony",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Justin",
+                        "score": 0
+                    },
+                    "result": "1"
+                }
+            ]
+        },
+        "Round_2": {
+            "matches": [
+                {
+                    "player1": {
+                        "name": "Lucas",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Samuel",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Sophia",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Elena",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Oliver",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Antony",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Michel",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Jules",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Mischa",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Tim",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Virginia",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Justin",
+                        "score": 0
+                    },
+                    "result": "1"
+                }
+            ]
+        },
+        "Round_3": {
+            "matches": [
+                {
+                    "player1": {
+                        "name": "Lucas",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Sophia",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Oliver",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Samuel",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Elena",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Antony",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Michel",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Mischa",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Virginia",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Jules",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Tim",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Justin",
+                        "score": 0
+                    },
+                    "result": "1"
+                }
+            ]
+        },
+        "Round_4": {
+            "matches": [
+                {
+                    "player1": {
+                        "name": "Lucas",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Oliver",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Elena",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Michel",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Michel",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Virginia",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Samuel",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Antony",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Tim",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Jules",
+                        "score": 0
+                    },
+                    "result": "1"
+                },
+                {
+                    "player1": {
+                        "name": "Jules",
+                        "score": 0
+                    },
+                    "player2": {
+                        "name": "Justin",
+                        "score": 0
+                    },
+                    "result": "1"
+                }
+            ]
+        }
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Test Tournament",
+        "location": "Cannes",
+        "date": "07/11/2023",
+        "num_rounds": 4,
+        "description": "First created tournament"
+    },
+    {
+        "name": "Summer Vibes",
+        "location": "Saint Raphael",
+        "date": "08/11/2023",
+        "num_rounds": 4,
+        "description": "summer tournament"
+    },
+    {
+        "name": "National cup",
+        "location": "Paris",
+        "date": "25/12/2023",
+        "num_rounds": 4,
+        "description": "national cup chess tournament in paris"
+    },
+    {
+        "name": "Winter Vibes",
+        "location": "Megeve",
+        "date": "26/12/2024",
+        "num_rounds": 4,
+        "description": "tournament in the snow"
+    },
+    {
+        "name": "International Tournament",
+        "location": "Montreal",
+        "date": "01/12/2023",
+        "num_rounds": 4,
+        "description": "Nothing to say"
+    },
+    {
+        "name": "World Cup",
+        "location": "Las Vegas",
+        "date": "16/11/2023",
+        "num_rounds": 4,
+        "description": "World cup chess tournament"
+    }
+]
