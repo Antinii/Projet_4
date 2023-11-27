@@ -120,48 +120,51 @@ class ControllerTournament:
     def generate_pairings(self, selected_players):
         if not hasattr(self, "pairings_record"):
             self.pairings_record = set()
-
         if self.tournament.rounds == 1:
             random.shuffle(selected_players)
             pairings = [(selected_players[i], selected_players[i + 1]) for i in range(0, len(selected_players), 2)]
         else:
             pairings = []
             selected_players.sort(key=lambda player: player.score, reverse=True)
-
             used_players = set()
+            already_paired = set()
+
             for i in range(0, len(selected_players) - 1, 2):
                 player1 = selected_players[i]
                 player2 = selected_players[i + 1]
+                while (player1, player2) in self.pairings_record or (player2, player1) in self.pairings_record or \
+                        (player1, player2) in already_paired or (player2, player1) in already_paired:
+                    i += 1
+                    if i + 1 >= len(selected_players):
+                        break
+                    player1 = selected_players[i]
+                    player2 = selected_players[i + 1]
 
-                if (player1, player2) in self.pairings_record or (player2, player1,) in self.pairings_record:
-                    while (player1, player2) in self.pairings_record or (player2, player1) in self.pairings_record:
-                        i += 1
-                        if i + 1 >= len(selected_players):
-                            break
-                        player1 = selected_players[i]
-                        player2 = selected_players[i + 1]
-
-                if i + 1 < len(selected_players):
-                    pairings.append((player1, player2))
-                    self.pairings_record.add((player1, player2))
-                    self.pairings_record.add((player2, player1))
-                    used_players.add(player1)
-                    used_players.add(player2)
+                pairings.append((player1, player2))
+                self.pairings_record.add((player1, player2))
+                self.pairings_record.add((player2, player1))
+                used_players.add(player1)
+                used_players.add(player2)
+                already_paired.add((player1, player2))
+                already_paired.add((player2, player1))
 
             if len(selected_players) % 2 != 0:
                 remaining_player = selected_players[-1]
                 opponent = None
-
                 for player in selected_players[::-1]:
                     if player not in used_players:
                         opponent = player
                         break
 
                 if (opponent is not None and (remaining_player, opponent) not in self.pairings_record
-                        and (opponent, remaining_player) not in self.pairings_record):
+                        and (opponent, remaining_player) not in self.pairings_record
+                        and (remaining_player, opponent) not in already_paired
+                        and (opponent, remaining_player) not in already_paired):
                     pairings.append((remaining_player, opponent))
                     self.pairings_record.add((remaining_player, opponent))
                     self.pairings_record.add((opponent, remaining_player))
+                    already_paired.add((remaining_player, opponent))
+                    already_paired.add((opponent, remaining_player))
 
         return pairings
 
