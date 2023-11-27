@@ -1,5 +1,9 @@
 class MainMenu:
+    """
+    Classe gérant l'affichage des différents menus du programme
+    """
 
+    # Menu principal
     @staticmethod
     def display_main_menu():
         print("------------------------------\n"
@@ -10,6 +14,7 @@ class MainMenu:
         print("[3]. Reports management")
         print("[4]. Exit the program")
 
+    # Menu joueurs
     @staticmethod
     def display_players_menu():
         print("------------------------------\n"
@@ -19,6 +24,7 @@ class MainMenu:
         print("[2]. Show a list of all players")
         print("[3]. Return back to main menu")
 
+    # Menu tournois
     @staticmethod
     def display_tournaments_menu():
         print("------------------------------\n"
@@ -29,6 +35,7 @@ class MainMenu:
         print("[3]. Show a list of all tournaments")
         print("[4]. Return back to main menu")
 
+    # Menu rapports
     @staticmethod
     def display_reports_menu():
         print("------------------------------\n"

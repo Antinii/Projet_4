@@ -1,29 +1,34 @@
 class ViewPlayer:
 
+    # Demande à l'utilisateur de rentrer le nom du joueur
     @staticmethod
     def get_last_name():
         while True:
             last_name = input("Enter the last name: ")
             return last_name
 
+    # Demande à l'utilisateur de rentrer le prénom du joueur
     @staticmethod
     def get_first_name():
         while True:
             first_name = input("Enter the first name: ")
             return first_name
 
+    # Demande à l'utilisateur de rentrer la date de naissance du joueur
     @staticmethod
     def get_date_of_birth():
         while True:
             date_of_birth = input("Enter the date of birth: ")
             return date_of_birth
 
+    # Demande à l'utilisateur de rentrer l'identifiant national d'échec du joueur
     @staticmethod
     def get_national_chess_id():
         while True:
             national_chess_id = input("Enter the national chess ID (as \"AB12345\": ")
             return national_chess_id
 
+    # Demande à l'utilisateur de selectionner les joueurs qui participent au tournoi
     @staticmethod
     def select_players(players):
         selected_players = []

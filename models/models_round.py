@@ -15,9 +15,11 @@ class Round:
         print(f"{self.name} started at {self.start_time}")
         print(f"{self.name} matches: \n")
 
+    # Fonction ajoutant le match en cours à la liste des matchs du round
     def add_match(self, match):
         self.matches.append(match)
 
+    # Fonction terminant le round en donnant la date et l'heure de fin
     def end_round(self):
         self.end_time = datetime.now()
         self.end_time = self.end_time.replace(microsecond=0)

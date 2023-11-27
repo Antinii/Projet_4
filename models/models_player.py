@@ -10,8 +10,10 @@ class Player:
     def __str__(self):
         return f"{self.last_name} {self.first_name} Score: {self.score}"
 
+    # Fonction ajoutant 1 au score du joueur s'il a gagné le match
     def is_winner(self):
         self.score += 1
 
+    # Fonction ajoutant 0.5 au score des joueurs si il y a match nul
     def is_draw(self):
         self.score += 0.5

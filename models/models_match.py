@@ -6,6 +6,7 @@ class Match:
     def __str__(self):
         return f"Match: {self.players[0][0].first_name} vs. {self.players[1][0].first_name}"
 
+    # Fonction qui inscrit le score du match en cours et met à jour le score du joueur
     def record_result(self):
         while True:
             self.result = input(

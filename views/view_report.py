@@ -5,6 +5,7 @@ FILENAME = "./data/completed_tournaments.json"
 
 class ViewReport:
 
+    # Fonction permettant l'affichage de tous les joueurs d'un tournoi sélectionné
     @staticmethod
     def get_players_from_selected_tournament():
         try:
@@ -35,6 +36,7 @@ class ViewReport:
 
         return []
 
+    # Fonction permettant l'affichage de tous les tours et matchs d'un tournoi sélectionné
     @staticmethod
     def get_rounds_and_matches():
         try:

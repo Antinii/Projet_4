@@ -10,6 +10,7 @@ class ControllerPlayer:
     def __init__(self):
         self.view_player = ViewPlayer()
 
+    # Fonction permettant la création d'un joueur dans la base de données
     def create_player(self):
         player_data = {}
         with open(FILENAME, "r") as f:
@@ -22,6 +23,7 @@ class ControllerPlayer:
         with open(FILENAME, "w") as f:
             json.dump(temp, f, indent=4)
 
+    # Fonction permettant l'affichage des joueurs trié par ordre alphabétique
     def view_players(self):
         with open(FILENAME, "r") as f:
             temp = json.load(f)
@@ -54,5 +56,5 @@ class ControllerPlayer:
             player_data["first_name"],
             player_data["last_name"],
             player_data["date_of_birth"],
-            player_data["national_chess_id"]
+            player_data["national_chess_id"],
         )

@@ -9,6 +9,7 @@ class ControllerMenu:
     def __init__(self):
         pass
 
+    # Fonction gérant les selections du menu principal
     def home_menu(self):
         while True:
             home = MainMenu()
@@ -31,6 +32,7 @@ class ControllerMenu:
             else:
                 print("You must select 1, 2, 3 or 4")
 
+    # Fonction gérant les selections du menu Tournois
     def tournament_menu(self):
         while True:
             tournament_menu = MainMenu()
@@ -55,6 +57,7 @@ class ControllerMenu:
             else:
                 print("You must select 1, 2, 3 or 4")
 
+    # Fonction gérant les selections du menu Joueurs
     def player_menu(self):
         while True:
             tournament_menu = MainMenu()
@@ -75,6 +78,7 @@ class ControllerMenu:
             else:
                 print("You must select 1, 2 or 3")
 
+    # Fonction gérant les selections du menu Rapports
     def report_menu(self):
         while True:
             report_menu = MainMenu()

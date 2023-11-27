@@ -1,23 +1,27 @@
 class ViewTournament:
 
+    # Demande à l'utilisateur de rentrer le nom du tournoi
     @staticmethod
     def get_name():
         while True:
             name = input("Enter the name of the tournament: ")
             return name
 
+    # Demande à l'utilisateur de rentrer le lieu du tournoi
     @staticmethod
     def get_location():
         while True:
             location = input("Enter the location of the tournament: ")
             return location
 
+    # Demande à l'utilisateur de rentrer la date du tournoi
     @staticmethod
     def get_date():
         while True:
             date = input("Enter the date of the tournament: ")
             return date
 
+    # Demande à l'utilisateur de rentrer le nombre du tours du tournoi
     @staticmethod
     def get_num_rounds():
         rounds = input("Enter the number of rounds in the tournament (default is 4): ")
@@ -27,6 +31,7 @@ class ViewTournament:
             rounds = int(rounds)
         return rounds
 
+    # Demande à l'utilisateur de rentrer une description au tournoi
     @staticmethod
     def get_description():
         while True:
@@ -36,6 +41,7 @@ class ViewTournament:
             else:
                 print("Your description is too long !")
 
+    # Fonction permettant à l'utilisateur de sélectionner un tournoi parmis la liste des tournois
     @staticmethod
     def select_tournament(tournaments):
         while True:

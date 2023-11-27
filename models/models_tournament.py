@@ -11,6 +11,7 @@ class Tournament:
         self.num_rounds = num_rounds
         self.description = description
 
+    # Fonction sauvegardant le tournoi dans la base de données des tournois terminés
     def save_tournament_to_json(self, filename):
         try:
             with open(filename, 'r') as file:
