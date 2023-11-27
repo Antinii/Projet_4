@@ -44,6 +44,7 @@ Et pour terminer, lancez le script:
 python main.py
 ```
 À l'aide du menu principal vous choisissez les différentes options qui s'offrent à vous.
+
 Afin de générer un nouveau rapport flake8:
 ```
 flake8 --format=html --htmldir=flake8_rapport
