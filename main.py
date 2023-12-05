@@ -3,7 +3,7 @@ from controllers.controller_menu import ControllerMenu
 
 def main():
     """
-    Main function starting the program
+    Main function starting the chess program
     """
     start_program = ControllerMenu()
     start_program.home_menu()
