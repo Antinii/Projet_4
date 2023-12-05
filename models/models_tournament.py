@@ -2,6 +2,9 @@ import json
 
 
 class Tournament:
+    """
+    Tournament class
+    """
     def __init__(self, name, location, date, description, num_rounds=4):
         self.name = name
         self.location = location
@@ -11,8 +14,11 @@ class Tournament:
         self.num_rounds = num_rounds
         self.description = description
 
-    # Fonction sauvegardant le tournoi dans la base de données des tournois terminés
     def save_tournament_to_json(self, filename):
+        """
+        Function saving the finished tournament in the completed_tournaments.json
+        :param filename:
+        """
         try:
             with open(filename, 'r') as file:
                 existing_data = json.load(file)

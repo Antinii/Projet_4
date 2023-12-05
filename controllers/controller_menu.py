@@ -1,16 +1,22 @@
-from Scripts.views.base import MainMenu
-from Scripts.controllers.controller_player import ControllerPlayer
-from Scripts.controllers.controller_tournament import ControllerTournament
-from Scripts.views.view_report import ViewReport
 import sys
+
+from controllers.controller_player import ControllerPlayer
+from controllers.controller_tournament import ControllerTournament
+from views.base import MainMenu
+from views.view_report import ViewReport
 
 
 class ControllerMenu:
+    """
+    Menu controller class
+    """
     def __init__(self):
         pass
 
-    # Fonction gérant les selections du menu principal
     def home_menu(self):
+        """
+        Function managing the main menu
+        """
         while True:
             home = MainMenu()
             home.display_main_menu()
@@ -32,8 +38,10 @@ class ControllerMenu:
             else:
                 print("You must select 1, 2, 3 or 4")
 
-    # Fonction gérant les selections du menu Tournois
     def tournament_menu(self):
+        """
+        Function managing the tournament menu
+        """
         while True:
             tournament_menu = MainMenu()
             tournament_menu.display_tournaments_menu()
@@ -48,8 +56,8 @@ class ControllerMenu:
                 tournament.launch_tournament()
 
             elif choice == "3":
-                all_tournaments_list = ControllerTournament()
-                all_tournaments_list.view_tournaments()
+                tournament = ControllerTournament()
+                tournament.continue_tournament()
 
             elif choice == "4":
                 self.home_menu()
@@ -57,8 +65,10 @@ class ControllerMenu:
             else:
                 print("You must select 1, 2, 3 or 4")
 
-    # Fonction gérant les selections du menu Joueurs
     def player_menu(self):
+        """
+        Function managing the player menu
+        """
         while True:
             tournament_menu = MainMenu()
             tournament_menu.display_players_menu()
@@ -78,8 +88,10 @@ class ControllerMenu:
             else:
                 print("You must select 1, 2 or 3")
 
-    # Fonction gérant les selections du menu Rapports
     def report_menu(self):
+        """
+        Function managing the reports menu
+        """
         while True:
             report_menu = MainMenu()
             report_menu.display_reports_menu()

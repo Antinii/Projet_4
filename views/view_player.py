@@ -1,36 +1,55 @@
 class ViewPlayer:
+    """
+    View player class
+    """
 
-    # Demande à l'utilisateur de rentrer le nom du joueur
     @staticmethod
     def get_last_name():
+        """
+        Function asking the user to enter the last name of the player
+        :return: last name of the player
+        """
         while True:
             last_name = input("Enter the last name: ")
             return last_name
 
-    # Demande à l'utilisateur de rentrer le prénom du joueur
     @staticmethod
     def get_first_name():
+        """
+        Function asking the user to enter the first name of the player
+        :return: first name of the player
+        """
         while True:
             first_name = input("Enter the first name: ")
             return first_name
 
-    # Demande à l'utilisateur de rentrer la date de naissance du joueur
     @staticmethod
     def get_date_of_birth():
+        """
+        Function asking the user to enter the birthday of the player
+        :return: date of birth of the player
+        """
         while True:
             date_of_birth = input("Enter the date of birth: ")
             return date_of_birth
 
-    # Demande à l'utilisateur de rentrer l'identifiant national d'échec du joueur
     @staticmethod
     def get_national_chess_id():
+        """
+        Function asking the user to enter the national chess id of the player
+        :return: national chess id of the player
+        """
         while True:
             national_chess_id = input("Enter the national chess ID (as \"AB12345\": ")
             return national_chess_id
 
-    # Demande à l'utilisateur de selectionner les joueurs qui participent au tournoi
     @staticmethod
     def select_players(players):
+        """
+        Function asking the user to select the players by their index in the list of players
+        :param players:
+        :return: list of selected players for the tournament
+        """
         selected_players = []
 
         while True:

@@ -1,13 +1,15 @@
 class Match:
+    """
+    Match class
+    """
     def __init__(self, player1, score1, player2, score2):
         self.players = ([player1, score1], [player2, score2])
         self.result = None
 
-    def __str__(self):
-        return f"Match: {self.players[0][0].first_name} vs. {self.players[1][0].first_name}"
-
-    # Fonction qui inscrit le score du match en cours et met à jour le score du joueur
     def record_result(self):
+        """
+        Function recording the score of the players in the current match
+        """
         while True:
             self.result = input(
                 f"Enter the result for {self.players[0][0].first_name} {self.players[0][0].last_name} vs."
@@ -30,3 +32,4 @@ class Match:
                 break
             else:
                 print("Invalid input. Please enter 1, 2, or 0.")
+

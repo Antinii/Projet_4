@@ -4,10 +4,15 @@ FILENAME = "./data/completed_tournaments.json"
 
 
 class ViewReport:
+    """
+    View reports class
+    """
 
-    # Fonction permettant l'affichage de tous les joueurs d'un tournoi sélectionné
     @staticmethod
     def get_players_from_selected_tournament():
+        """
+        Function showing the list of all the players in a selected tournament
+        """
         try:
             with open(FILENAME, 'r') as file:
                 completed_tournaments = json.load(file)
@@ -36,9 +41,11 @@ class ViewReport:
 
         return []
 
-    # Fonction permettant l'affichage de tous les tours et matchs d'un tournoi sélectionné
     @staticmethod
     def get_rounds_and_matches():
+        """
+        Function showing all the rounds and matches of a selected tournament
+        """
         try:
             with open(FILENAME, 'r') as file:
                 completed_tournaments = json.load(file)

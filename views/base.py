@@ -1,11 +1,13 @@
 class MainMenu:
     """
-    Classe gérant l'affichage des différents menus du programme
+    Main menu class
     """
 
-    # Menu principal
     @staticmethod
     def display_main_menu():
+        """
+        Function printing the main menu options
+        """
         print("------------------------------\n"
               "   CHESS TOURNAMENT PROGRAM \n"
               "------------------------------")
@@ -14,9 +16,11 @@ class MainMenu:
         print("[3]. Reports management")
         print("[4]. Exit the program")
 
-    # Menu joueurs
     @staticmethod
     def display_players_menu():
+        """
+        Function printing the players menu options
+        """
         print("------------------------------\n"
               "      PLAYERS MANAGEMENT \n"
               "------------------------------")
@@ -24,20 +28,24 @@ class MainMenu:
         print("[2]. Show a list of all players")
         print("[3]. Return back to main menu")
 
-    # Menu tournois
     @staticmethod
     def display_tournaments_menu():
+        """
+        Function printing the tournament menu options
+        """
         print("------------------------------\n"
               "    TOURNAMENTS MANAGEMENT \n"
               "------------------------------")
         print("[1]. Create a new tournament")
-        print("[2]. Launch a tournament")
-        print("[3]. Show a list of all tournaments")
+        print("[2]. Launch a new tournament")
+        print("[3]. Continue a pending tournament")
         print("[4]. Return back to main menu")
 
-    # Menu rapports
     @staticmethod
     def display_reports_menu():
+        """
+        Function printing the reports menu options
+        """
         print("------------------------------\n"
               "      REPORTS MANAGEMENT \n"
               "------------------------------")
