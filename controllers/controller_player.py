@@ -1,17 +1,22 @@
-from Scripts.views.view_player import ViewPlayer
-from Scripts.models.models_player import Player
-
 import json
+
+from models.models_player import Player
+from views.view_player import ViewPlayer
 
 FILENAME = "./data/players.json"
 
 
 class ControllerPlayer:
+    """
+    Player controller class
+    """
     def __init__(self):
         self.view_player = ViewPlayer()
 
-    # Fonction permettant la création d'un joueur dans la base de données
     def create_player(self):
+        """
+        Function creating a player in the json
+        """
         player_data = {}
         with open(FILENAME, "r") as f:
             temp = json.load(f)
@@ -23,8 +28,10 @@ class ControllerPlayer:
         with open(FILENAME, "w") as f:
             json.dump(temp, f, indent=4)
 
-    # Fonction permettant l'affichage des joueurs trié par ordre alphabétique
     def view_players(self):
+        """
+        Function displaying all the players in alphabetical order
+        """
         with open(FILENAME, "r") as f:
             temp = json.load(f)
             temp.sort(key=lambda player: player["last_name"])
@@ -40,6 +47,10 @@ class ControllerPlayer:
 
     @classmethod
     def load_players(cls, player_config):
+        """
+        Loading the players for the json
+        :param player_config:
+        """
         players = []
         try:
             with open(player_config, "r") as file:

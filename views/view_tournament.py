@@ -1,29 +1,44 @@
 class ViewTournament:
+    """
+    View tournament class
+    """
 
-    # Demande à l'utilisateur de rentrer le nom du tournoi
     @staticmethod
     def get_name():
+        """
+        Function asking the user to enter the name of the tournament
+        :return: name of the tournament
+        """
         while True:
             name = input("Enter the name of the tournament: ")
             return name
 
-    # Demande à l'utilisateur de rentrer le lieu du tournoi
     @staticmethod
     def get_location():
+        """
+        Function asking the user to enter the location of the tournament
+        :return: location of the tournament
+        """
         while True:
             location = input("Enter the location of the tournament: ")
             return location
 
-    # Demande à l'utilisateur de rentrer la date du tournoi
     @staticmethod
     def get_date():
+        """
+        Function asking the user to enter the date of the tournament
+        :return: date of the tournament
+        """
         while True:
             date = input("Enter the date of the tournament: ")
             return date
 
-    # Demande à l'utilisateur de rentrer le nombre du tours du tournoi
     @staticmethod
     def get_num_rounds():
+        """
+        Function asking the user to enter the number of rounds of the tournament
+        :return: number of rounds
+        """
         rounds = input("Enter the number of rounds in the tournament (default is 4): ")
         if not rounds.isdigit():
             rounds = 4
@@ -31,9 +46,12 @@ class ViewTournament:
             rounds = int(rounds)
         return rounds
 
-    # Demande à l'utilisateur de rentrer une description au tournoi
     @staticmethod
     def get_description():
+        """
+        Function asking the user to enter the description of the tournament
+        :return: description of the tournament
+        """
         while True:
             description = input("Enter the description of the tournament: ")
             if len(description) <= 50:
@@ -41,9 +59,12 @@ class ViewTournament:
             else:
                 print("Your description is too long !")
 
-    # Fonction permettant à l'utilisateur de sélectionner un tournoi parmis la liste des tournois
     @staticmethod
     def select_tournament(tournaments):
+        """
+        Function asking the user to select a tournament whitin the list of all available tournaments
+        :param tournaments:
+        """
         while True:
             print("\nAvailable Tournaments:")
             for i, tournament in enumerate(tournaments, start=1):

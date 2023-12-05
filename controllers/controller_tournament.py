@@ -1,27 +1,33 @@
-from Scripts.views.view_tournament import ViewTournament
-from Scripts.views.view_player import ViewPlayer
-from Scripts.models.models_tournament import Tournament
-from Scripts.controllers.controller_player import ControllerPlayer
-from Scripts.models.models_round import Round
-from Scripts.models.models_match import Match
-from Scripts.views.base import MainMenu
-
 import json
 import random
 
+from models.models_match import Match
+from models.models_player import Player
+from models.models_round import Round
+from models.models_tournament import Tournament
+from views.base import MainMenu
+from views.view_player import ViewPlayer
+from views.view_tournament import ViewTournament
+from controllers.controller_player import ControllerPlayer
 
 FILENAME = "./data/tournaments.json"
 
 
 class ControllerTournament:
+    """
+    Tournament controller class
+    """
+
     def __init__(self):
         self.view_tournament = ViewTournament()
         self.view_player = ViewPlayer()
         self.base = MainMenu()
         self.controller_player = ControllerPlayer()
 
-    # Fonction permettant la création d'un tournoi dans la base de données
     def create_tournament(self):
+        """
+        Function saving a tournament in the json
+        """
         tournament_data = {}
         with open(FILENAME, "r") as f:
             temp = json.load(f)
@@ -34,8 +40,10 @@ class ControllerTournament:
         with open(FILENAME, "w") as f:
             json.dump(temp, f, indent=4)
 
-    # Fonction permettant d'afficher la liste des tournois
     def view_tournaments(self):
+        """
+        Function showing the list of all tournaments
+        """
         with open(FILENAME, "r") as f:
             temp = json.load(f)
             print("\nList of all tournaments: \n")
@@ -47,6 +55,10 @@ class ControllerTournament:
 
     @classmethod
     def load_tournaments(cls, tournament_config):
+        """
+        Loading all the tournaments from the json
+        :param tournament_config:
+        """
         tournaments = []
         try:
             with open(tournament_config, "r") as file:
@@ -69,8 +81,10 @@ class ControllerTournament:
             tournament_data["num_rounds"],
         )
 
-    # Fonction qui permet de lancer un tournoi à partir des tournois existants
     def launch_tournament(self):
+        """
+        Function launching a tournament from the start
+        """
         selected_tournament, selected_players = self.setup_tournament()
 
         print(f'\nTournament "{selected_tournament.name}" started !\n')
@@ -78,9 +92,14 @@ class ControllerTournament:
             self.start_round(selected_tournament, round_number, selected_players)
 
         selected_tournament.save_tournament_to_json("./data/completed_tournaments.json")
+        with open('./data/pending_tournament.json', 'w') as file:
+            json.dump({}, file)
 
-    # Fonction qui permet la selection du tournoi et de ses joueurs
     def setup_tournament(self):
+        """
+        Function setting up the tournament by loading the list of tournaments
+        and the list of players, and registering them all.
+        """
         tournaments = self.load_tournaments("./data/tournaments.json")
         selected_tournament = self.view_tournament.select_tournament(tournaments)
 
@@ -91,8 +110,13 @@ class ControllerTournament:
         self.tournament = selected_tournament
         return selected_tournament, selected_players
 
-    # Fonction qui démarre les rounds du tournoi en cours
     def start_round(self, selected_tournament, round_number, selected_players):
+        """
+        Function starting a round in the tournament
+        :param selected_tournament:
+        :param round_number:
+        :param selected_players:
+        """
         current_round = Round()
         selected_tournament.rounds.append(current_round)
 
@@ -105,19 +129,31 @@ class ControllerTournament:
         self.display_scoreboard(selected_players)
         print("\n")
 
-    # Fonction qui liste les matchs du round et qui va demander d'inscrire le résultat du match
+        self.save_tournament_state(selected_tournament)
+
     def play_round_matches(self, current_round, pairings):
+        """
+        Function playing all the matches available in a round
+        :param current_round:
+        :param pairings:
+        """
         for i, (player1, player2) in enumerate(pairings):
             print(f"Match {i + 1}: {player1.first_name} vs. {player2.first_name}")
         print("\n")
         for i, (player1, player2) in enumerate(pairings):
+            self.save_tournament_state(self.tournament)
             match = Match(player1, 0, player2, 0)
             match.record_result()
             current_round.add_match(match)
+
         current_round.end_round()
 
-    # Fonction qui génére les paires de joueurs
     def generate_pairings(self, selected_players):
+        """
+        Function generating a pair of players to play a match
+        :param selected_players
+        :return: a pair of players
+        """
         if not hasattr(self, "pairings_record"):
             self.pairings_record = set()
         if self.tournament.rounds == 1:
@@ -168,9 +204,103 @@ class ControllerTournament:
 
         return pairings
 
-    # Fonction qui affiche le score des joueurs
     def display_scoreboard(self, selected_players):
+        """
+        Function displaying the scoreboard at the end of a round
+        :param selected_players:
+        """
         print("\nRound points:")
         selected_players.sort(key=lambda player: player.score, reverse=True)
         for i, player in enumerate(selected_players, start=1):
             print(f"{i}. {player.first_name} {player.last_name}: {player.score} points ")
+
+    def save_tournament_state(self, tournament):
+        """
+        Function to save the tournament state to the pending_tournament json file
+        :param tournament: The tournament object whose state will be saved
+        """
+        tournament_data = {
+            "name": tournament.name,
+            "location": tournament.location,
+            "date": tournament.date,
+            "description": tournament.description,
+            "num_rounds": tournament.num_rounds,
+            "players": [],
+        }
+
+        for player in tournament.players:
+            player_info = {
+                "first_name": player.first_name,
+                "last_name": player.last_name,
+                "date_of_birth": player.date_of_birth,
+                "chess_id": player.national_chess_id,
+                "score": player.score
+            }
+            tournament_data["players"].append(player_info)
+
+        for index, round_data in enumerate(self.tournament.rounds, start=1):
+            matches_data = [{
+                'player1': {
+                    'name': match.players[0][0].first_name,
+                    'score': match.players[0][1],
+                },
+                'player2': {
+                    'name': match.players[1][0].first_name,
+                    'score': match.players[1][1],
+                },
+                'result': match.result,
+            } for match in round_data.matches]
+
+            tournament_data[f'Round_{index}'] = {
+                'matches': matches_data
+            }
+
+        with open("./data/pending_tournament.json", "w") as file:
+            json.dump(tournament_data, file, indent=4)
+
+    def continue_tournament(self):
+        """
+        Function loading the data from the pending tournament json file
+        and continuing the tournament at his state
+        :return: the selected tournament
+        """
+        try:
+            with open('./data/pending_tournament.json', 'r') as file:
+                tournament_data = json.load(file)
+        except FileNotFoundError:
+            print("\nNo pending tournament found.")
+            return
+
+        if not tournament_data:
+            print("\nNo pending tournament found.")
+            return
+
+        tournament_name = tournament_data['name']
+        tournament_location = tournament_data['location']
+        tournament_date = tournament_data['date']
+        tournament_description = tournament_data['description']
+        tournament_num_rounds = tournament_data['num_rounds']
+        players_data = tournament_data['players']
+
+        players = [
+            Player(player['first_name'], player['last_name'], player['date_of_birth'], player['chess_id'],)
+            for player in players_data
+        ]
+
+        tournament = Tournament(tournament_name, tournament_location, tournament_date, tournament_description,
+                                tournament_num_rounds)
+        tournament.players = players
+
+        selected_tournament = tournament
+        self.tournament = selected_tournament
+        selected_players = players
+
+        print(f'\nTournament "{selected_tournament.name}" continued !\n')
+        for round_number in range(1, selected_tournament.num_rounds + 1):
+            self.start_round(selected_tournament, round_number, selected_players)
+
+        selected_tournament.save_tournament_to_json("./data/completed_tournaments.json")
+        with open('./data/pending_tournament.json', 'w') as file:
+            json.dump({}, file)
+
+        return selected_tournament

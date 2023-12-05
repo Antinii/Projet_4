@@ -2,6 +2,9 @@ from datetime import datetime
 
 
 class Round:
+    """
+    Round class
+    """
     ROUND_NUMBER = 1
 
     def __init__(self):
@@ -15,12 +18,17 @@ class Round:
         print(f"{self.name} started at {self.start_time}")
         print(f"{self.name} matches: \n")
 
-    # Fonction ajoutant le match en cours à la liste des matchs du round
     def add_match(self, match):
+        """
+        Function adding the current match in the list of the round matches
+        :param match:
+        """
         self.matches.append(match)
 
-    # Fonction terminant le round en donnant la date et l'heure de fin
     def end_round(self):
+        """
+        Function ending the round and showing the time of it
+        """
         self.end_time = datetime.now()
         self.end_time = self.end_time.replace(microsecond=0)
         print(f"\n{self.name} ended at {self.end_time}")

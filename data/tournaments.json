@@ -40,5 +40,12 @@
         "date": "16/11/2023",
         "num_rounds": 4,
         "description": "World cup chess tournament"
+    },
+    {
+        "name": "soutenance",
+        "location": "paris",
+        "date": "04/12/2023",
+        "num_rounds": 4,
+        "description": "tournoi de soutenance"
     }
 ]
